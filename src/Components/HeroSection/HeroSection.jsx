@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonDiv, Container, HeroImageDiv, HeroTextDiv } from './HeroSection.style'
+import { ButtonDiv, Container, EditIcon, EditPhoneDiv, HeroImageDiv, HeroTextDiv, PhoneIcon } from './HeroSection.style'
 import { Button } from '../../GlobalStyle/Global.style'
 
 const HeroSection = ({theme}) => {
@@ -19,6 +19,13 @@ const HeroSection = ({theme}) => {
            <HeroImageDiv>
             <img style={{height:"90%"}} src="/images/food.png" alt="" />
            </HeroImageDiv>
+
+           <EditPhoneDiv>
+             <Button style={{marginRight:"1rem"}} padding={"1rem 1rem"} borderstyle={"50%"}>  <EditIcon  size={40}/></Button>
+             <Button style={{background:"#FFB766"}} padding={"1rem 1rem"} borderstyle={"50%"}> <PhoneIcon  size={40}/> </Button>
+
+           
+           </EditPhoneDiv>
 
     </Container>
   )
