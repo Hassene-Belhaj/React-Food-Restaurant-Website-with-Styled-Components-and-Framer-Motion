@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import {Container, GlobalStyle } from './GlobalStyle/Global.style'
+import { ThemeProvider } from 'styled-components'
+import Navbar from './Components/Navbar/Navbar'
+import useLocalStorage from 'use-local-storage'
+import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const App = () => {
+
+const [theme,setTheme] = useLocalStorage("dark")
+
+const light = {
+  background : "#fff" ,
+  color : "#000",
+}
+
+const dark = {
+  background : "#000" ,
+  color : "#fff",
+}
+
+const HandleToggle = () => {
+  setTheme(theme === "dark" ? "light" : "dark")
+}
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Router>
+    <ThemeProvider theme={theme === "dark" ? light : dark} >
+      <GlobalStyle />
+    <Container>
+      <Navbar theme={theme} HandleToggle={HandleToggle} />
+    </Container> 
+    </ThemeProvider>
+      </Router>
   )
 }
 
