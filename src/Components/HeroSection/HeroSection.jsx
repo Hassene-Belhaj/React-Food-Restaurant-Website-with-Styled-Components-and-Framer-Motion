@@ -10,9 +10,9 @@ const HeroSection = ({theme}) => {
              <span style={{fontSize:"5rem",color:"#FFB766"}}>WoodFood </span>     </h2>
              <p style={{fontSize:"1.5rem"}}>the most delicious outdoor food</p> 
              <ButtonDiv>
-               <Button padding={"1rem 2rem"} borderstyle={"25px"}>Capacity</Button>
-               <Button padding={"1rem 2rem"} borderstyle={"25px"}>Location</Button>
-               <Button padding={"1rem 2rem"} borderstyle={"25px"}>Seat Type</Button>
+               <Button style={{marginRight:"1rem"}} padding={"1rem 2rem"} borderstyle={"25px"}>Capacity</Button>
+               <Button style={{marginRight:"1rem"}} padding={"1rem 2rem"} borderstyle={"25px"}>Location</Button>
+               <Button style={{marginRight:"1rem"}} padding={"1rem 2rem"} borderstyle={"25px"}>Seat Type</Button>
              </ButtonDiv>
            </HeroTextDiv>
            
