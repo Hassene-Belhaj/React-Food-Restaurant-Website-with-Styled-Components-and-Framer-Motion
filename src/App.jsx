@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import Navbar from './Components/Navbar/Navbar'
 import useLocalStorage from 'use-local-storage'
 import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom'
+import HeroSection from './Components/HeroSection/HeroSection'
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const HandleToggle = () => {
       <GlobalStyle />
     <Container>
       <Navbar theme={theme} HandleToggle={HandleToggle} />
+      <HeroSection theme={theme}  />
     </Container> 
     </ThemeProvider>
       </Router>

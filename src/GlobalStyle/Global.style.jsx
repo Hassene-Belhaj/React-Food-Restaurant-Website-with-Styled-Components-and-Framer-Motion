@@ -29,7 +29,8 @@ height: 100vh;
 export const Button = styled.button`
 padding: ${({padding})=>padding};
 border: 2px solid lightgray;
-color: ${({color})=>color};
+color: ${({theme})=>theme.color};
+background: ${({theme})=>theme.background};
 border-radius:${({borderstyle})=>borderstyle};
 text-transform: capitalize;
 font-weight: 500;
