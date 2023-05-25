@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, DarkLight, DarkLightIconeDiv, LightDark, NavbarDivLinks, NavbarLink, NavbarLogo, NavbarSocialLinks, SocialLinkFb, SocialLinkInsta } from './Navbar.style'
+import { Container, DarkLight, DarkLightIconeDiv, LightDark, NavbarDivLinks, NavbarLink, NavbarLogo, NavbarSocialLinks, OutLineMenu, SocialLinkFb, SocialLinkInsta } from './Navbar.style'
 import { Button } from '../../GlobalStyle/Global.style'
 import { motion } from 'framer-motion'
 
@@ -47,7 +47,9 @@ const Item = {
         {theme==="light" ? <LightDark  onClick={HandleToggle} size={25}  /> 
         : <DarkLight onClick={HandleToggle} size={25} />
         }
+         <OutLineMenu size={30}/>
         </DarkLightIconeDiv>
+    
 
         <NavbarSocialLinks variants={Item}>
         <Button borderstyle={"14px"} padding={"14px 18px"}><SocialLinkFb size={20} /> </Button>

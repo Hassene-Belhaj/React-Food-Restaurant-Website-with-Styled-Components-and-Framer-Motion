@@ -50,11 +50,16 @@ const HeroSection = ({theme}) => {
              </ButtonDiv>
              
              <Smdiv variants={Item}>
-             <Button style={{marginRight:"1rem"}} padding={"1rem 1rem"} borderstyle={"50%"}>
-                <EditIcon size={40}/>
-              </Button>          
-              <Button style={{background:"#FFB766"}} padding={"1rem 1rem"} borderstyle={"50%"}>
-                <PhoneIcon size={40}/> </Button>
+               <motion.div varient={Item}>
+                <Button style={{marginRight:"1rem"}} padding={"1rem 1rem"} borderstyle={"50%"}>
+                    <EditIcon size={40}/>
+                  </Button>  
+                  </motion.div>  
+                  <motion.div varient={Item}>      
+                  <Button style={{background:"#FFB766"}} padding={"1rem 1rem"} borderstyle={"50%"}>
+                    <PhoneIcon size={40}/> </Button>
+                    </motion.div>  
+
              </Smdiv>
            
            </HeroTextDiv>

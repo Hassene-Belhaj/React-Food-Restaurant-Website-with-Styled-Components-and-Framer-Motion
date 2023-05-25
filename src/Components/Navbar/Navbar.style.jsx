@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 import { FaFacebookF,FaInstagram,FaMoon,FaSun } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 
 export const Container = styled(motion.div)`
@@ -54,11 +55,26 @@ transition: all 0.15s ease-in-out;
 
 
 export const DarkLightIconeDiv = styled(motion.div)`
-width: 20px;
+display: flex;
 height: auto;
 padding-right: 3rem;
 cursor :pointer; 
 @media screen and (max-width : 1080px){
+width: 20%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+`
+export const OutLineMenu = styled(AiOutlineMenu)`
+display: none;
+@media screen and (max-width:768px){
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    color: ${({theme})=>theme.color};
+
 }
 `
 
