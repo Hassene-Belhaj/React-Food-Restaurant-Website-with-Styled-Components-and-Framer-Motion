@@ -6,7 +6,6 @@ import useLocalStorage from 'use-local-storage'
 import { BrowserRouter as Router ,Routes,Route } from 'react-router-dom'
 import HeroSection from './Components/HeroSection/HeroSection'
 
-
 const App = () => {
 
 const [theme,setTheme] = useLocalStorage("dark")
@@ -27,6 +26,7 @@ const HandleToggle = () => {
 
 
   return (
+
       <Router>
     <ThemeProvider theme={theme === "dark" ? light : dark} >
       <GlobalStyle />

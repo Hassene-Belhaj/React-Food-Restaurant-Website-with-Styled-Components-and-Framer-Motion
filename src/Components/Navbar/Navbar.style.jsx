@@ -13,7 +13,7 @@ justify-content:space-between;
 align-items: center;
 `
 export const H2 = styled.h2`
-display: inline;
+
 `
 
 export const NavbarLogo = styled(motion.div)`
@@ -29,13 +29,19 @@ display:flex;
 justify-content:flex-start;
 align-items: center;
 padding-left:20rem;
+@media screen and (max-width : 1408px){
+    width: 80%;
+}
+@media screen and (max-width : 1080px){
+    display: none;
+}
 `
 
 export const NavbarLink = styled(Link)`
 text-decoration: none;
 display: inline-block;
 font-weight: 500;
-margin-right: 2rem;
+margin-right: 4rem;
 color: ${({theme})=>theme.color};
 cursor: pointer;
 transition: all 0.15s ease-in-out;
@@ -43,12 +49,17 @@ transition: all 0.15s ease-in-out;
     color: #FFB766;
     transition: all 0.15s ease-in-out;
 }
+
 `
 
 
 export const DarkLightIconeDiv = styled(motion.div)`
 width: 20px;
 height: auto;
+padding-right: 3rem;
+cursor :pointer; 
+@media screen and (max-width : 1080px){
+}
 `
 
 export const DarkLight = styled(FaMoon)`
@@ -64,10 +75,13 @@ export const SocialLinkFb = styled(FaFacebookF)`
 export const SocialLinkInsta = styled(FaInstagram)`
 `
 export const NavbarSocialLinks = styled(motion.div)`
-width: 250px;
+width: 180px;
 height: auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding-right: 5rem;
+padding-right: 2rem;
+@media screen and (max-width : 1408px){
+    display: none;
+}
 `

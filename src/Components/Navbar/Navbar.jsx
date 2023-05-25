@@ -44,8 +44,8 @@ const Item = {
         </motion.div>       
     </NavbarDivLinks>  
         <DarkLightIconeDiv variants={Item}>
-        {theme==="light" ? <LightDark  onClick={HandleToggle} size={20}  /> 
-        : <DarkLight onClick={HandleToggle} size={20} />
+        {theme==="light" ? <LightDark  onClick={HandleToggle} size={25}  /> 
+        : <DarkLight onClick={HandleToggle} size={25} />
         }
         </DarkLightIconeDiv>
 
