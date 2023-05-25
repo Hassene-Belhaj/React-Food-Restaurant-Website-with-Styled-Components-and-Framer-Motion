@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonDiv, Container, EditIcon, EditPhoneDiv, HeroContainer, HeroImageDiv, HeroTextDiv, PhoneIcon, Span } from './HeroSection.style'
+import { ButtonDiv, Container, EditIcon, EditPhoneDiv, HeroContainer, HeroImage, HeroImageDiv, HeroTextDiv, PhoneIcon, Smdiv, Span } from './HeroSection.style'
 import { Button } from '../../GlobalStyle/Global.style'
 import {motion} from 'framer-motion'
 
@@ -48,14 +48,25 @@ const HeroSection = ({theme}) => {
             
               
              </ButtonDiv>
+             
+             <Smdiv variants={Item}>
+             <Button style={{marginRight:"1rem"}} padding={"1rem 1rem"} borderstyle={"50%"}>
+                <EditIcon size={40}/>
+              </Button>          
+              <Button style={{background:"#FFB766"}} padding={"1rem 1rem"} borderstyle={"50%"}>
+                <PhoneIcon size={40}/> </Button>
+             </Smdiv>
+           
            </HeroTextDiv>
            
            <HeroImageDiv variants={ItemTwo}>
-            <img src="/images/food.png" alt="" />
+            <HeroImage  variants={ItemTwo} src="/images/food.png" alt="" />
+            {/* <HeroImageDivBG></HeroImageDivBG> */}
            </HeroImageDiv>
 
       </HeroContainer>
-           
+
+          <motion.div variants={Item}>
            <EditPhoneDiv variants={Item}>
               <Button style={{marginRight:"1rem"}} padding={"1rem 1rem"} borderstyle={"50%"}>
                 <EditIcon size={40}/>
@@ -63,6 +74,7 @@ const HeroSection = ({theme}) => {
               <Button padding={"1rem 1rem"} borderstyle={"50%"}>
                 <PhoneIcon size={40}/> </Button>
            </EditPhoneDiv>
+           </motion.div> 
 
     </Container>
   )
